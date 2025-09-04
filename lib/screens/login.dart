@@ -15,7 +15,8 @@ class _LoginPageState extends State<LoginPage> {
   void _validalogin() {
     if (usuario.text == 'admin' && senha.text == '123') {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const HomePage()),
+        MaterialPageRoute(builder: (context) =>
+        const HomePage()),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -41,7 +42,6 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextField(
-                // 4. Associando os controladores aos TextFields.
                 controller: usuario,
                 decoration: const InputDecoration(
                   labelText: 'Usuário',
@@ -51,7 +51,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 16),
               TextField(
-                // 5. Associando os controladores aos TextFields.
                 controller: senha,
                 obscureText: true,
                 decoration: const InputDecoration(
